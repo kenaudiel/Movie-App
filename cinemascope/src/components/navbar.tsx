@@ -63,10 +63,17 @@ export default function Navbar(){
           </NavigationMenuList>
 
           <NavigationMenuList className="">
-					  <Button onClick={() => onClickToggleMode(theme, setTheme)} variant="outline">
-							{theme === "light" ? <Sun/> : <Moon/>}
+					  <Button onClick={() => onClickToggleMode(theme, setTheme)} variant="secondary" size="icon">
+							{theme === "dark" ? <Sun/> : <Moon/>}
 						</Button>
+						<Button variant="secondary" size="icon">
+              <FaGithub />
+            </Button>
+            <Avatar>
+              <AvatarFallback>K</AvatarFallback>
+            </Avatar>
           </NavigationMenuList>
+					
       </NavigationMenu>
   )
 }
