@@ -4,11 +4,17 @@ import {
     NavigationMenuList,
     NavigationMenuLink
 } from '@/components/ui/navigation-menu'
+import { Moon, Sun } from 'lucide-react'
+import { Avatar, AvatarFallback } from '@/components/ui/avatar';
+import { FaGithub } from "react-icons/fa";
+import { DropdownMenu, DropdownMenuContent, DropdownMenuTrigger, DropdownMenuItem } from './ui/dropdown-menu';
+import { Button } from './ui/button';
+import { useTheme } from './theme-provider'
 
 type listItemProps = {
-  key:string,
+  key:string | number,
   title:string,
-  href?:string
+  href:string
 }
 
 const listItem1:listItemProps[] = [
@@ -34,19 +40,33 @@ const listItem1:listItemProps[] = [
   }
 ] 
 
+type Theme = "dark" | "light" | "system"
+
+function onClickToggleMode(theme:Theme, setTheme:(theme:Theme) => void){
+	if(theme === "dark"){
+		setTheme("light")
+	} else {
+		setTheme("dark")
+	}
+}
+
 export default function Navbar(){
-    return(
-        <NavigationMenu className="bg-gray-200">
-            <NavigationMenuList className="">
-                {listItem1.map(item => 
-                <NavigationMenuItem>
-                  <NavigationMenuLink href={item.href}>{item.title}</NavigationMenuLink>
-                </NavigationMenuItem>)}
-            </NavigationMenuList>
+	const {theme, setTheme} = useTheme();
 
-            <NavigationMenuList className="">
+  return(
+      <NavigationMenu className="bg-gray-200">
+          <NavigationMenuList className="gap-2">
+            {listItem1.map(item => 
+            <NavigationMenuItem>
+              <NavigationMenuLink href={item.href}>{item.title}</NavigationMenuLink>
+            </NavigationMenuItem>)}
+          </NavigationMenuList>
 
-            </NavigationMenuList>
-        </NavigationMenu>
-    )
+          <NavigationMenuList className="">
+					  <Button onClick={() => onClickToggleMode(theme, setTheme)} variant="outline">
+							{theme === "light" ? <Sun/> : <Moon/>}
+						</Button>
+          </NavigationMenuList>
+      </NavigationMenu>
+  )
 }
