@@ -7,7 +7,7 @@ import {
 import { Moon, Sun } from 'lucide-react'
 import { Avatar, AvatarFallback } from '@/components/ui/avatar';
 import { FaGithub } from "react-icons/fa";
-import { DropdownMenu, DropdownMenuContent, DropdownMenuTrigger, DropdownMenuItem } from './ui/dropdown-menu';
+import { DropdownMenu, DropdownMenuContent, DropdownMenuTrigger, DropdownMenuItem, DropdownMenuGroup } from './ui/dropdown-menu';
 import { Button } from './ui/button';
 import { useTheme } from './theme-provider'
 
@@ -63,17 +63,28 @@ export default function Navbar(){
           </NavigationMenuList>
 
           <NavigationMenuList className="">
-					  <Button onClick={() => onClickToggleMode(theme, setTheme)} variant="secondary" size="icon">
+					  <Button onClick={() => onClickToggleMode(theme, setTheme)} variant="ghost" size="icon">
 							{theme === "dark" ? <Sun/> : <Moon/>}
 						</Button>
-						<Button variant="secondary" size="icon">
-              <FaGithub />
+						<Button asChild variant="ghost" size="icon">
+              <NavigationMenuLink href="https://github.com/kenaudiel">
+                <FaGithub />  
+              </NavigationMenuLink>
             </Button>
-            <Avatar>
-              <AvatarFallback>K</AvatarFallback>
-            </Avatar>
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Avatar>
+                  <AvatarFallback>K</AvatarFallback>
+                </Avatar>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent>
+                <DropdownMenuGroup>
+                  
+                </DropdownMenuGroup>
+              </DropdownMenuContent>
+            </DropdownMenu>
+            
           </NavigationMenuList>
-					
       </NavigationMenu>
   )
 }
