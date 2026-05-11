@@ -4,10 +4,10 @@ import {
     NavigationMenuList,
     NavigationMenuLink
 } from '@/components/ui/navigation-menu'
-import { Moon, Sun } from 'lucide-react'
+import { CircleQuestionMark, DollarSign, LogOut, Moon, Settings, Sun, UserRound } from 'lucide-react'
 import { Avatar, AvatarFallback } from '@/components/ui/avatar';
 import { FaGithub } from "react-icons/fa";
-import { DropdownMenu, DropdownMenuContent, DropdownMenuTrigger, DropdownMenuItem, DropdownMenuGroup } from './ui/dropdown-menu';
+import { DropdownMenu, DropdownMenuContent, DropdownMenuTrigger, DropdownMenuItem, DropdownMenuGroup, DropdownMenuSeparator } from './ui/dropdown-menu';
 import { Button } from './ui/button';
 import { useTheme } from './theme-provider'
 
@@ -79,7 +79,13 @@ export default function Navbar(){
               </DropdownMenuTrigger>
               <DropdownMenuContent>
                 <DropdownMenuGroup>
-                  
+                  <DropdownMenuItem><UserRound />Profile</DropdownMenuItem>
+                  <DropdownMenuItem><DollarSign />Billing</DropdownMenuItem>
+                  <DropdownMenuItem><Settings />Setting</DropdownMenuItem>
+                  <DropdownMenuItem><CircleQuestionMark />Support</DropdownMenuItem>
+                  <DropdownMenuSeparator />
+                  <DropdownMenuItem className="text-red-500"><LogOut color="#ff0000" />Log Out</DropdownMenuItem>
+
                 </DropdownMenuGroup>
               </DropdownMenuContent>
             </DropdownMenu>
