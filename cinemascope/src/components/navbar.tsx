@@ -56,15 +56,15 @@ export default function Navbar(){
 	const {theme, setTheme} = useTheme();
 
   return(
-      <NavigationMenu className="bg-gray-200">
-          <NavigationMenuList className="gap-2">
+      <NavigationMenu className="bg-gray-200 justify-between">
+          <NavigationMenuList className="ml-20 gap-2">
             {listItem1.map(item => 
             <NavigationMenuItem>
               <NavigationMenuLink href={item.href}>{item.title}</NavigationMenuLink>
             </NavigationMenuItem>)}
           </NavigationMenuList>
 
-          <NavigationMenuList className="">
+          <NavigationMenuList className="mr-4 gap-2">
 					  <Button onClick={() => onClickToggleMode(theme, setTheme)} variant="ghost" size="icon">
 							{theme === "dark" ? <Sun/> : <Moon/>}
 						</Button>
