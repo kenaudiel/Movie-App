@@ -60,7 +60,7 @@ export default function Navbar(){
           <NavigationMenuList className="ml-20 gap-2">
             {listItem1.map(item => 
             <NavigationMenuItem>
-              <NavigationMenuLink href={item.href}>{item.title}</NavigationMenuLink>
+              <NavigationMenuLink key={item.key} href={item.href}>{item.title}</NavigationMenuLink>
             </NavigationMenuItem>)}
           </NavigationMenuList>
 
