@@ -56,7 +56,7 @@ export default function Navbar(){
 	const {theme, setTheme} = useTheme();
 
   return(
-      <NavigationMenu className="bg-gray-200 justify-between">
+      <NavigationMenu className="justify-between h-12">
           <NavigationMenuList className="ml-20 gap-2">
             {listItem1.map(item => 
             <NavigationMenuItem>
@@ -65,21 +65,21 @@ export default function Navbar(){
           </NavigationMenuList>
 
           <NavigationMenuList className="mr-4 gap-2">
-					  <Button onClick={() => onClickToggleMode(theme, setTheme)} variant="ghost" size="icon">
+					  <Button onClick={() => onClickToggleMode(theme, setTheme)} variant="ghost" size="icon-lg">
 							{theme === "dark" ? <Sun/> : <Moon/>}
 						</Button>
-						<Button asChild variant="ghost" size="icon">
-              <NavigationMenuLink href="https://github.com/kenaudiel">
+						<Button asChild variant="ghost" size="icon-lg">
+              <NavigationMenuLink href="https://github.com/kenaudiel" target="_blank">
                 <FaGithub />  
               </NavigationMenuLink>
             </Button>
             <DropdownMenu>
-              <DropdownMenuTrigger asChild>
-                <Avatar>
+              <DropdownMenuTrigger asChild className="ml-6">
+                <Avatar size="lg">
                   <AvatarFallback>K</AvatarFallback>
                 </Avatar>
               </DropdownMenuTrigger>
-              <DropdownMenuContent>
+              <DropdownMenuContent className="mr-10">
                 <DropdownMenuGroup>
                   <DropdownMenuItem><UserRound />Profile</DropdownMenuItem>
                   <DropdownMenuItem><DollarSign />Billing</DropdownMenuItem>
