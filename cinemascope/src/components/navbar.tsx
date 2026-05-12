@@ -59,8 +59,8 @@ export default function Navbar(){
       <NavigationMenu className="justify-between h-12">
           <NavigationMenuList className="ml-20 gap-2">
             {listItem1.map(item => 
-            <NavigationMenuItem>
-              <NavigationMenuLink key={item.key} href={item.href}>{item.title}</NavigationMenuLink>
+            <NavigationMenuItem key={item.key}>
+              <NavigationMenuLink href={item.href}>{item.title}</NavigationMenuLink>
             </NavigationMenuItem>)}
           </NavigationMenuList>
 
