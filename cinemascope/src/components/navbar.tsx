@@ -12,33 +12,34 @@ import { CircleQuestionMark, DollarSign, LogOut, Moon, Settings, Sun, UserRound 
 import { FaGithub } from "react-icons/fa";
 
 import { useTheme } from './theme-provider'
+import { Link } from 'react-router-dom';
 
 type listItemProps = {
   key:string | number,
   title:string,
-  href:string
+  path:string
 }
 
 const listItem1:listItemProps[] = [
   {
     key:"Home",
     title:"Home",
-    href:""
+    path:""
   },
   {
     key:"About",
     title:"About",
-    href:""
+    path:""
   },
   {
     key:"Films",
     title:"Films",
-    href:""
+    path:""
   },
   {
     key:"Blog",
     title:"Blog",
-    href:""
+    path:""
   }
 ] 
 
@@ -60,7 +61,9 @@ export default function Navbar(){
           <NavigationMenuList className="ml-20 gap-2">
             {listItem1.map(item => 
             <NavigationMenuItem key={item.key}>
-              <NavigationMenuLink href={item.href}>{item.title}</NavigationMenuLink>
+              <Link to={item.path}>
+                <NavigationMenuLink>{item.title}</NavigationMenuLink>
+              </Link>
             </NavigationMenuItem>)}
           </NavigationMenuList>
 
