@@ -24,22 +24,22 @@ const listItem1:listItemProps[] = [
   {
     key:"Home",
     title:"Home",
-    path:""
+    path:"/"
   },
   {
     key:"About",
     title:"About",
-    path:""
+    path:"/about"
   },
   {
     key:"Films",
     title:"Films",
-    path:""
+    path:"/films"
   },
   {
     key:"Blog",
     title:"Blog",
-    path:""
+    path:"/blog"
   }
 ] 
 
