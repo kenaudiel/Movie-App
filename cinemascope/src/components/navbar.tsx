@@ -57,7 +57,7 @@ export default function Navbar(){
 	const {theme, setTheme} = useTheme();
 
   return(
-      <NavigationMenu className="justify-between h-12">
+      <NavigationMenu className="justify-between h-15">
           <NavigationMenuList className="ml-20 gap-2">
             {listItem1.map(item => 
             <NavigationMenuItem key={item.key}>
@@ -82,7 +82,7 @@ export default function Navbar(){
                   <AvatarFallback>K</AvatarFallback>
                 </Avatar>
               </DropdownMenuTrigger>
-              <DropdownMenuContent className="mr-10">
+              <DropdownMenuContent className="mr-5 mt-2">
                 <DropdownMenuGroup>
                   <DropdownMenuItem><UserRound />Profile</DropdownMenuItem>
                   <DropdownMenuItem><DollarSign />Billing</DropdownMenuItem>
