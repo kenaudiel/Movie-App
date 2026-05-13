@@ -2,6 +2,7 @@ import { ThemeProvider } from "./components/theme-provider";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import RootLayout from "./rootlayout";
 import HomePage from "./pages/homepage";
+import NotFoundPage from "./pages/notfoundpage";
 
 const route = createBrowserRouter([
     {
@@ -13,6 +14,10 @@ const route = createBrowserRouter([
                 element:<HomePage />
             }
         ]
+    },
+    {
+        path:"*",
+        element:<NotFoundPage />
     }
 ])
 
