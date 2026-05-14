@@ -8,6 +8,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
+import { Link } from "react-router-dom"
 
 type CardImageProps = {
     title:string,
@@ -35,7 +36,9 @@ export function CardImage({title, description, badge, buttonText}:CardImageProps
         </CardDescription>
       </CardHeader>
       <CardFooter>
-        <Button className="w-full">{buttonText}</Button>
+        <Link to="">
+          <Button className="w-full">{buttonText}</Button>
+        </Link>
       </CardFooter>
     </Card>
   )
