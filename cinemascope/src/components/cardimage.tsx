@@ -14,10 +14,11 @@ type CardImageProps = {
     title:string,
     description:string,
     badge: "Free" | "Premium"
-    buttonText:string
+    buttonText:string,
+    path:string
 }
 
-export function CardImage({title, description, badge, buttonText}:CardImageProps) {
+export function CardImage({title, description, badge, buttonText, path}:CardImageProps) {
   return (
     <Card className="relative mx-auto w-full pt-0">
       <div className="absolute inset-0 z-30 aspect-video bg-black/35" />
@@ -36,8 +37,8 @@ export function CardImage({title, description, badge, buttonText}:CardImageProps
         </CardDescription>
       </CardHeader>
       <CardFooter>
-        <Link to="">
-          <Button className="w-full">{buttonText}</Button>
+        <Link to={path}>
+          <Button>{buttonText}</Button>
         </Link>
       </CardFooter>
     </Card>
