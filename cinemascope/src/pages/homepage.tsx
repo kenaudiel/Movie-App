@@ -5,11 +5,13 @@ export default function HomePage(){
     return(
         <section className="p-10">
             <h2 className="mb-5">Popular Movies</h2>   
-            <div className="grid grid-cols-4 gap-5">
+            <ul className="grid grid-cols-4 gap-5">
                 {films.map(film => 
-                    <CardImage title={film.title} description={film.description} badge={film.badge} path={`/films/${film.id}`} />
+                    <li key={film.id}>
+                        <CardImage title={film.title} description={film.description} badge={film.badge} path={`/films/${film.id}`} />
+                    </li>
                 )}
-            </div>
+            </ul>
         </section>
     )
 }
