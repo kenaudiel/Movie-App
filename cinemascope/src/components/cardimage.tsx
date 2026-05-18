@@ -1,45 +1,45 @@
 import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
 import {
   Card,
   CardAction,
   CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
+import { Dot, Image, Star } from "lucide-react"
+import { FaStar } from "react-icons/fa"
 import { Link } from "react-router-dom"
 
 type CardImageProps = {
     title:string,
-    description:string,
+    year:number,
+    duration:number,
+    rating:number
     badge: "Free" | "Premium"
     path:string
 }
 
-export function CardImage({title, description, badge, path}:CardImageProps) {
+export function CardImage({title, year, duration, rating, badge, path}:CardImageProps) {
   return (
-    <Card className="relative mx-auto w-full pt-0">
-      <div className="absolute inset-0 z-30 aspect-video bg-black/35" />
-      <img
-        src="https://avatar.vercel.sh/shadcn1"
-        alt="Event cover"
-        className="relative z-20 aspect-video w-full object-cover brightness-60 grayscale dark:brightness-40"
-      />
-      <CardHeader>
+    <Card className="mx-auto w-full pt-0">
+      <div className="inset-0 z-30 w-full h-60 bg-black/35 flex items-center justify-center">
+        <Image />
+      </div>
+      <CardHeader className="">
         <CardAction>
           <Badge variant="secondary">{badge}</Badge>
         </CardAction>
-        <CardTitle>{title}</CardTitle>
-        <CardDescription>
-          {description}
+        <CardTitle className="mb-2">{title}</CardTitle>
+        <CardDescription className="flex items-center">
+          {year}
+          <Dot />
+          {`${duration}m`}  
+        </CardDescription>
+        <CardDescription className="flex items-center justify-start gap-2">
+          <FaStar color="#f5c518"/>
+          {rating}
         </CardDescription>
       </CardHeader>
-      <CardFooter>
-        <Link to={path}>
-          <Button>Watch</Button>
-        </Link>
-      </CardFooter>
     </Card>
   )
 }
