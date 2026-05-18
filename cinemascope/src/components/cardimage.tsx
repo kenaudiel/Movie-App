@@ -6,7 +6,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
-import { Dot, Image, Star } from "lucide-react"
+import { Dot, Image } from "lucide-react"
 import { FaStar } from "react-icons/fa"
 import { Link } from "react-router-dom"
 
@@ -22,9 +22,11 @@ type CardImageProps = {
 export function CardImage({title, year, duration, rating, badge, path}:CardImageProps) {
   return (
     <Card className="mx-auto w-full pt-0">
-      <div className="inset-0 z-30 w-full h-60 bg-black/35 flex items-center justify-center">
-        <Image />
-      </div>
+      <Link to={path}>
+        <div className="inset-0 z-30 w-full h-60 bg-black/35 flex items-center justify-center">
+          <Image />
+        </div>
+      </Link>
       <CardHeader className="">
         <CardAction>
           <Badge variant="secondary">{badge}</Badge>
