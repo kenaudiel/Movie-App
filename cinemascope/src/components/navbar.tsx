@@ -57,7 +57,7 @@ export default function Navbar(){
 	const {theme, setTheme} = useTheme();
 
   return(
-      <NavigationMenu className="justify-between h-15">
+      <NavigationMenu className="justify-between h-15 border-b-2">
           <NavigationMenuList className="ml-20 gap-2">
             {listItem1.map(item => 
             <NavigationMenuItem key={item.key}>
