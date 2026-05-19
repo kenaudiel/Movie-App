@@ -29,7 +29,7 @@ export function CardImage({title, year, duration, rating, badge, path}:CardImage
       </Link>
       <CardHeader className="">
         <CardAction>
-          <Badge variant="secondary">{badge}</Badge>
+          <Badge variant="secondary" className={`${badge === "Premium" && "text-yellow-600 dark:text-yellow-400"}`}>{badge}</Badge>
         </CardAction>
         <CardTitle className="mb-2">{title}</CardTitle>
         <CardDescription className="flex items-center">
