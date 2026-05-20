@@ -6,7 +6,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
-import { Dot, Image } from "lucide-react"
+import { Clock, Dot, Image } from "lucide-react"
 import { FaStar } from "react-icons/fa"
 import { Link } from "react-router-dom"
 
@@ -31,15 +31,16 @@ export function CardImage({title, year, duration, rating, badge, path}:CardImage
         <CardAction>
           <Badge variant="secondary" className={`${badge === "Premium" && "text-yellow-600 dark:text-yellow-400"}`}>{badge}</Badge>
         </CardAction>
-        <CardTitle className="mb-2">{title}</CardTitle>
-        <CardDescription className="flex items-center">
-          {year}
-          <Dot />
-          {`${duration}m`}  
-        </CardDescription>
-        <CardDescription className="flex items-center justify-start gap-2">
-          <FaStar color="#f5c518"/>
-          {rating}
+        <CardTitle className="mb-2">{title} <span className="text-muted-foreground ml-2">{`(${year})`}</span></CardTitle>
+        <CardDescription className="flex items-center gap-5">
+          <div className="flex items-center gap-1">
+            <Clock size={16} color="#e26918"/>
+              {`${duration}m`}
+          </div>
+          <div className="flex items-center gap-1">
+            <FaStar color="#f5c518"/>
+            {rating}
+          </div>
         </CardDescription>
       </CardHeader>
     </Card>
