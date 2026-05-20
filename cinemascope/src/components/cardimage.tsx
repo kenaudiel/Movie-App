@@ -31,7 +31,7 @@ export function CardImage({id, title, year, duration, rating, badge, path, synop
         </div>
       </Link>
       <CardHeader className="">
-        <CardTitle className="w-45">
+        <CardTitle className="w-42">
           <Link to={`/films/${id}`}>
             <span className="hover:text-orange-300">{title}</span>
           </Link>
