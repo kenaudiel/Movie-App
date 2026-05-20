@@ -19,7 +19,7 @@ function ListFilm(){
 
     return(
         sliceFilm.map(film =>
-            <li className="w-180">
+            <li key={film.id} className="w-180">
                 <CardImageHorizontal id={film.id} title={film.title} synopsis={film.synopsis} year={film.year} rating={film.rating} duration={film.duration} badge={film.badge}/>
             </li>
         )
