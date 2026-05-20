@@ -12,7 +12,7 @@ export default function HomePage(){
                 <ul className="grid grid-cols-4 gap-5">
                     {films.map(film => 
                         <li key={film.id}>
-                            <CardImage title={film.title} badge={film.badge} rating={film.rating} duration={film.duration} year={film.year} path={`/films/${film.id}`} />
+                            <CardImage synopsis={film.synopsis} title={film.title} badge={film.badge} rating={film.rating} duration={film.duration} year={film.year} path={`/films/${film.id}`} />
                         </li>
                     )}
                 </ul>
