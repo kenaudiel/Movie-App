@@ -2,8 +2,10 @@ import {Clock, Image} from "lucide-react";
 import { Card, CardAction, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";
 import { Badge } from "./ui/badge";
 import { FaStar } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 type CardImageProps = {
+    id:number,
     title:string,
     synopsis:string,
     year:number,
@@ -12,16 +14,23 @@ type CardImageProps = {
     badge:"Free" | "Premium"
 }
 
-export default function CardImageHorizontal({title, synopsis, year, rating, duration, badge}:CardImageProps){
+export default function CardImageHorizontal({id, title, synopsis, year, rating, duration, badge}:CardImageProps){
     return(
-        <Card className="flex flex-row gap-2 items-center">
-            <div className="h-full w-40 flex items-center justify-center"><Image /></div>
-            <div className="w-140">
+        <Card className="flex flex-row gap-2 items-center p-0">
+            <Link to={`/films/${id}`}>
+                <div className="h-40 w-40 flex items-center justify-center"><Image /></div>
+            </Link>
+            <div className="w-140 py-5">
                 <CardHeader className="">
                     <CardAction>
                         <Badge variant="secondary" className={`${badge === "Premium" && "text-yellow-400"}`}>{badge}</Badge>
                     </CardAction>
-                    <CardTitle>{title} <span className="text-muted-foreground ml-2">{`(${year})`}</span></CardTitle>
+                    <CardTitle>
+                        <Link to={`/films/${id}`}> 
+                        <span className="hover:text-orange-300">{title}</span>
+                        </Link>
+                        <span className="text-muted-foreground ml-2">{`(${year})`}</span>
+                    </CardTitle>
                 </CardHeader>
                 <CardContent className="w-100">
                     <CardDescription className="mt-1">{synopsis}</CardDescription>

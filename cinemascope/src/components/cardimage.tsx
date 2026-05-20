@@ -12,6 +12,7 @@ import { FaStar } from "react-icons/fa"
 import { Link } from "react-router-dom"
 
 type CardImageProps = {
+    id:number
     title:string,
     year:number,
     synopsis:string
@@ -21,16 +22,20 @@ type CardImageProps = {
     path:string
 }
 
-export function CardImage({title, year, duration, rating, badge, path, synopsis}:CardImageProps) {
+export function CardImage({id, title, year, duration, rating, badge, path, synopsis}:CardImageProps) {
   return (
     <Card className="mx-auto w-full pt-0">
       <Link to={path}>
-        <div className="inset-0 z-30 w-full h-60 bg-black/35 flex items-center justify-center">
+        <div className="inset-0 z-30 w-full h-60 bg-black/35 flex items-center justify-center ">
           <Image />
         </div>
       </Link>
       <CardHeader className="">
-        <CardTitle className="w-40">{title} <span className="text-muted-foreground ml-2">{`(${year})`}</span></CardTitle>
+        <CardTitle className="w-45">
+          <Link to={`/films/${id}`}>
+            <span className="hover:text-orange-300">{title}</span>
+          </Link>
+          <span className="text-muted-foreground ml-2">{`(${year})`}</span></CardTitle>
         <CardAction>
           <Badge variant="secondary" className={`${badge === "Premium" && "text-yellow-600 dark:text-yellow-400"}`}>{badge}</Badge>
         </CardAction>
