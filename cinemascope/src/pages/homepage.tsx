@@ -7,7 +7,7 @@ export default function HomePage(){
             <section className="">
                 
             </section>
-            <section className="p-10">
+            <section className="">
                 <h2 className="mb-5">Popular Movies</h2>   
                 <ul className="grid grid-cols-4 gap-5">
                     {films.map(film => 
