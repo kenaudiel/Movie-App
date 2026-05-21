@@ -80,5 +80,41 @@ export const films:filmsMetaData[] = [
         duration:300,
         rating:9.2,
         year:2015
-    }
+    },
+    {
+        id:9,
+        title:"The Lion King",
+        synopsis:"A young lion prince flees his kingdom after his father's murder, only to return years later as an adult to reclaim his throne from his wicked uncle.",
+        badge:"Premium",
+        duration:100,
+        rating:8.2,
+        year:2015
+    },
+    {
+        id:10,
+        title:"Frozen",
+        synopsis:"When a newly crowned queen accidentally uses her icy powers to trap her kingdom in an eternal winter, her optimistic sister teams up with a rugged mountain man to find her and break the spell.",
+        badge:"Premium",
+        duration:110,
+        rating:8.3,
+        year:2013
+    },
+    {
+        id:11,
+        title:"Cars",
+        synopsis:"A hotshot, arrogant rookie race car gets stranded in a forgotten, rundown desert town on his way to a championship, where he discovers the true meaning of friendship and family.",
+        badge:"Premium",
+        duration:90,
+        rating:8.4,
+        year:2014
+    },
+    {
+        id:12,
+        title:"Fast & Furious",
+        synopsis:"An undercover cop infiltrates the street racing subculture of Los Angeles to bust a high-speed hijacking ring, but finds his loyalties tested after befriending the gang's charismatic leader.",
+        badge:"Premium",
+        duration:130,
+        rating:8.5,
+        year:2001
+    },
 ]
