@@ -4,11 +4,16 @@ import { films } from "@/data/films";
 export default function FilmsPage(){
     
     return(
-        <section>
-
-            <ul className="flex flex-col gap-3">
+        <section className="flex gap-20">
+            <div>
+                <p className="text-sm text-muted-foreground mb-5">POPULAR FILM THIS WEEK</p>
+                <ul className="flex flex-col gap-3">
                 {ListFilm()}
-            </ul>
+                </ul>
+            </div>
+            <div>
+                <p className="text-sm text-muted-foreground mb-5">MORE FILMS FOR YOU</p>
+            </div>
         </section>
     )
 }
