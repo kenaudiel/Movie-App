@@ -7,9 +7,10 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
-import { Clock, Image } from "lucide-react"
+import { Clock } from "lucide-react"
 import { FaStar } from "react-icons/fa"
 import { Link } from "react-router-dom"
+import FilmImage from "./filmimage"
 
 type CardImageProps = {
     id:number
@@ -25,11 +26,7 @@ type CardImageProps = {
 export function CardImage({id, title, year, duration, rating, badge, path, synopsis}:CardImageProps) {
   return (
     <Card className="mx-auto w-full pt-0">
-      <Link to={path}>
-        <div className="inset-0 z-30 w-full h-60 bg-black/35 flex items-center justify-center ">
-          <Image />
-        </div>
-      </Link>
+      <FilmImage path={path} className="inset-0 z-30 w-full h-60 bg-black/35 flex items-center justify-center "/>
       <CardHeader className="">
         <CardTitle className="w-42">
           <Link to={`/films/${id}`}>

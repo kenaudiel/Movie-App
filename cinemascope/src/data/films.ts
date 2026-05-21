@@ -48,7 +48,7 @@ export const films:filmsMetaData[] = [
     {
         id:5,
         title:"Up",
-        synopsis:"A seventy-year-old widower ties thousands of balloons to his house to fulfill a promise to his late wife, accidentally taking a young wilderness explorer along for the ride.",
+        synopsis:"A seventy-year-old widower ties thousands of balloons to his house to fulfill a promise to his late wife, accidentally taking a young explorer along for the ride.",
         badge:"Free",
         duration:130,
         rating:9.3,

@@ -1,8 +1,9 @@
-import {Clock, Image} from "lucide-react";
+import {Clock} from "lucide-react";
 import { Card, CardAction, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";
 import { Badge } from "./ui/badge";
 import { FaStar } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import FilmImage from "./filmimage";
 
 type CardImageProps = {
     id:number,
@@ -17,9 +18,7 @@ type CardImageProps = {
 export default function CardImageHorizontal({id, title, synopsis, year, rating, duration, badge}:CardImageProps){
     return(
         <Card className="flex flex-row gap-2 items-center p-0">
-            <Link to={`/films/${id}`}>
-                <div className="h-40 w-40 flex items-center justify-center"><Image /></div>
-            </Link>
+            <FilmImage path={`/films/${id}`}/>
             <div className="w-140 py-5">
                 <CardHeader className="">
                     <CardAction>
