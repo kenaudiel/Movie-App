@@ -12,7 +12,7 @@ export const films:filmsMetaData[] = [
     {
         id:1,
         title:"Interstellar",
-        synopsis:"In a dystopian future where Earth has become near-uninhabitable, a team of astronauts embark on a mission to find a new home for humanity.",
+        synopsis:"A team of explorers travels through a wormhole in space in an attempt to ensure humanity's survival as Earth faces a global crop blight and second Dust Bowl.",
         badge:"Free",
         duration:130,
         rating:9.1,
@@ -21,7 +21,7 @@ export const films:filmsMetaData[] = [
     {
         id:2,
         title:"The Avengers",
-        synopsis:"Earth's mightiest heroes must come together and learn to fight as a team if they are going to stop the mischievous Loki and his alien army from enslaving humanity.",
+        synopsis:"Earth's mightiest heroes must learn to work together as a team to stop the mischievous Loki and his alien army from enslaving humanity.",
         badge:"Premium",
         duration:150,
         rating:9.5,
@@ -30,7 +30,7 @@ export const films:filmsMetaData[] = [
     {
         id:3,
         title:"Spider-Man: No Way Home",
-        synopsis:"With Spider-Man's identity now revealed, Peter asks Doctor Strange for help. When a spell goes wrong, dangerous foes from other worlds start to appear.",
+        synopsis:"With Spider-Man's identity now revealed, Peter Parker asks Doctor Strange for magical help, but the spell goes wrong, tearing open the multiverse and releasing dangerous villains from other worlds.",
         badge:"Free",
         duration:140,
         rating:8.9,
@@ -39,7 +39,7 @@ export const films:filmsMetaData[] = [
     {
         id:4,
         title:"Ice Age",
-        synopsis:"Manny the mammoth, Sid the loquacious sloth, and Diego the sabre-toothed tiger go on a comical quest to return a human baby back to his father, across a world on the brink of an ice age.",
+        synopsis:"Set during the days of the ice age, a misfit trio of prehistoric beasts—a mammoth, a sloth, and a saber-toothed tiger—unite to return a lost human baby to his tribe.",
         badge:"Premium",
         duration:120,
         rating:8.7,
@@ -48,7 +48,7 @@ export const films:filmsMetaData[] = [
     {
         id:5,
         title:"Up",
-        synopsis:"A grumpy old man turns his house into an airship using balloons and flies off to South America with a young stowaway.",
+        synopsis:"A seventy-year-old widower ties thousands of balloons to his house to fulfill a promise to his late wife, accidentally taking a young wilderness explorer along for the ride.",
         badge:"Free",
         duration:130,
         rating:9.3,
@@ -57,7 +57,7 @@ export const films:filmsMetaData[] = [
     {
         id:6,
         title:"Toy Story",
-        synopsis:"A cowboy doll is profoundly jealous when a new spaceman action figure supplants him as the top toy in a boy's bedroom.",
+        synopsis:"A cowboy doll's position as a boy's favorite toy is threatened when a flashy new spaceman action figure arrives, sparking a rivalry that gets them both lost in the outside world.",
         badge:"Premium",
         duration:120,
         rating:9.0,
@@ -66,7 +66,7 @@ export const films:filmsMetaData[] = [
     {
         id:7,
         title:"Despicable Me",
-        synopsis:"A villainous mastermind's plan to steal the moon from the sky veers off course when a trio of orphans looking for a dad capture his heart instead.",
+        synopsis:"A cynical supervillain adopts three orphan girls as pawns for a grand heist, but finds his malicious heart softening as he grows genuinely attached to them.",
         badge:"Premium",
         duration:140,
         rating:9.1,
