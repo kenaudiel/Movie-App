@@ -13,6 +13,7 @@ import { FaGithub } from "react-icons/fa";
 
 import { useTheme } from './theme-provider'
 import { Link } from 'react-router-dom';
+import SearchBar from './searchbar';
 
 type listItemProps = {
   key:string | number,
@@ -66,6 +67,10 @@ export default function Navbar(){
               </Link>
               </NavigationMenuItem>
             )}
+          </NavigationMenuList>
+
+          <NavigationMenuList className=""> 
+            <SearchBar />
           </NavigationMenuList>
 
           <NavigationMenuList className="mr-4 gap-2">
