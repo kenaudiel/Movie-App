@@ -13,7 +13,7 @@ export default function FilmsPage(){
     return(
         <section className="flex gap-15">
             <div>
-                <p className="text-sm text-muted-foreground mb-5">POPULAR FILM THIS WEEK</p>
+                <p className="text-sm text-muted-foreground mb-5">POPULAR FILMS THIS WEEK</p>
                 <ul className="flex flex-col gap-3">
                 {ListFilm()}
                 </ul>
