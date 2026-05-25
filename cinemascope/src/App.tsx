@@ -31,7 +31,7 @@ const route = createBrowserRouter([
                 element:<BlogPage />
             },
             {
-                path:"/films/:id",
+                path:"/film/:id",
                 element:<FilmDetail />
             },
             {

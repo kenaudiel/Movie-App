@@ -23,7 +23,7 @@ function FilmCardImageList(){
     return(
         sampleFilms.map(film => 
             <li key={film.id}>
-                <CardImage id={film.id} synopsis={film.synopsis} title={film.title} badge={film.badge} rating={film.rating} duration={film.duration} year={film.year} path={`/films/${film.id}`} />
+                <CardImage id={film.id} synopsis={film.synopsis} title={film.title} badge={film.badge} rating={film.rating} duration={film.duration} year={film.year} path={`/film/${film.id}`} />
             </li>
         )
     )

@@ -18,14 +18,14 @@ type CardImageProps = {
 export default function CardImageHorizontal({id, title, synopsis, year, rating, duration, badge}:CardImageProps){
     return(
         <Card className="flex flex-row gap-2 items-center p-0">
-            <FilmImage path={`/films/${id}`}/>
+            <FilmImage path={`/film/${id}`}/>
             <div className="w-140 py-5">
                 <CardHeader className="">
                     <CardAction>
                         <Badge variant="secondary" className={`${badge === "Premium" && "text-yellow-400"}`}>{badge}</Badge>
                     </CardAction>
                     <CardTitle>
-                        <Link to={`/films/${id}`}> 
+                        <Link to={`/film/${id}`}> 
                         <span className="hover:text-orange-300">{title}</span>
                         </Link>
                         <span className="text-muted-foreground ml-2">{`(${year})`}</span>

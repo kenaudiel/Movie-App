@@ -29,7 +29,7 @@ export function CardImage({id, title, year, duration, rating, badge, path, synop
       <FilmImage path={path} className="inset-0 z-30 w-full h-60 bg-black/35 flex items-center justify-center "/>
       <CardHeader className="">
         <CardTitle className="w-42">
-          <Link to={`/films/${id}`}>
+          <Link to={`/film/${id}`}>
             <span className="hover:text-orange-300">{title}</span>
           </Link>
           <span className="text-muted-foreground ml-2">{`(${year})`}</span></CardTitle>
