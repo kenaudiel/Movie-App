@@ -16,6 +16,34 @@ export default function FilmDetail(){
     const filmsFiltered = films.filter(film => film.id === Number(id))
     const film = filmsFiltered[0]
 
+    const filmDetails:filmDetailsType[] = [
+    {
+        key:"Duration",
+        detail:"Duration",
+        value:`${film.duration} min`,
+        icon:<Clock size={16} color="#e26918"/>
+    },
+    {
+        key:"Rating",
+        detail:"Rating",
+        value:film.rating,
+        icon:<FaStar color="#f5c518"/>
+    }
+]
+
+    function filmDetailsList(){
+        return(
+            <ul className="flex flex-col gap-1">
+                {filmDetails.map(film => 
+                    <li key={film.key} className="flex items-center gap-1">
+                        {film.icon}
+                        {`${film.detail}: ${film.value}`}
+                    </li>
+                )}
+            </ul>
+        )
+    }
+
     return(
         <section className="flex gap-20">
             <Card className="flex flex-row p-10 gap-15 w-220 bg-background ring-0">
@@ -29,7 +57,7 @@ export default function FilmDetail(){
                     </CardDescription>
                     <CardDescription className="mt-3 flex flex-col gap-1">
                         <div>
-                            
+                            {filmDetailsList()}
                         </div>
                     </CardDescription>
                 </CardHeader>
