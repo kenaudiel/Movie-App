@@ -51,7 +51,7 @@ function ListMoreFilm(){
         sliceMoreFilm.map(film =>
             <li key={film.id} className="max-w-fit">
                 <div className="flex flex-col items-center gap-2">
-                    <FilmImage className="w-25 h-30 bg-card" path={`/films/${film.id}`}/>
+                    <FilmImage className="w-25 h-30 bg-card" path={`/film/${film.id}`}/>
                     <div className="flex gap-2">
                         <div className="flex items-center gap-1 text-xs">
                             <Clock size={12} color="#e26918"/>
