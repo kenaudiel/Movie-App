@@ -1,8 +1,21 @@
 import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { films } from "@/data/films";
 import { Clock, Image } from "lucide-react";
 import { FaStar } from "react-icons/fa";
+import { useParams } from "react-router-dom";
+
+type filmDetailsType = {
+    key:string,
+    detail:string,
+    value:string | number
+    icon:React.ReactNode
+}
 
 export default function FilmDetail(){
+    const {id} = useParams()
+    const filmsFiltered = films.filter(film => film.id === Number(id))
+    const film = filmsFiltered[0]
+
     return(
         <section className="flex gap-20">
             <Card className="flex flex-row p-10 gap-15 w-220 bg-background ring-0">
@@ -10,17 +23,13 @@ export default function FilmDetail(){
                     <Image />
                 </div>
                 <CardHeader className="flex flex-col gap-7 w-2/3">
-                    <CardTitle className="text-xl">Title <span className="text-muted-foreground ml-2">(2026)</span></CardTitle>
+                    <CardTitle className="text-xl">{film.title} <span className="text-muted-foreground ml-2">{`(${film.year})`}</span></CardTitle>
                     <CardDescription>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore fugit ex fuga recusandae eligendi corrupti sint illum provident voluptates porro, vel animi vitae praesentium nesciunt, dignissimos eveniet consectetur laboriosam! Provident.</CardDescription>
+                       {film.synopsis}
+                    </CardDescription>
                     <CardDescription className="mt-3 flex flex-col gap-1">
-                        <div className="flex items-center gap-1">
-                            <Clock size={16} color="#e26918"/>
-                            {`Duration: 200 min`}
-                        </div>
-                        <div className="flex items-center gap-1">
-                            <FaStar color="#f5c518"/>
-                            {`Rating: 8.0`}
+                        <div>
+                            
                         </div>
                     </CardDescription>
                 </CardHeader>
