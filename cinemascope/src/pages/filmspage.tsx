@@ -11,20 +11,27 @@ const sliceMoreFilm = sortFilm.slice(6,12)
 export default function FilmsPage(){
     
     return(
-        <section className="flex gap-15">
-            <div>
-                <p className="text-sm text-muted-foreground mb-5">POPULAR FILMS THIS WEEK</p>
-                <ul className="flex flex-col gap-3">
-                {ListFilm()}
-                </ul>
+        <>
+            <div className="flex flex-col gap-2 px-20 pt-10">
+                <h1 className="text-3xl font-bold font-sans">Films</h1>
+                <h2 className="text-lg text-gray-300/80">Find your next favorite film to watch.</h2>
             </div>
-            <div>
-                <p className="text-sm text-muted-foreground mb-5">MORE FILMS FOR YOU</p>
-                <ul className="grid grid-cols-3 gap-x-3 gap-y-7">
-                    {ListMoreFilm()}
-                </ul>
-            </div>
-        </section>
+            
+            <section className="flex gap-15">
+                <div>
+                    <p className="text-sm text-muted-foreground mb-5">POPULAR FILMS THIS WEEK</p>
+                    <ul className="flex flex-col gap-3">
+                    {ListFilm()}
+                    </ul>
+                </div>
+                <div>
+                    <p className="text-sm text-muted-foreground mb-5">MORE FILMS FOR YOU</p>
+                    <ul className="grid grid-cols-3 gap-x-3 gap-y-7">
+                        {ListMoreFilm()}
+                    </ul>
+                </div>
+            </section>
+        </>
     )
 }
 
