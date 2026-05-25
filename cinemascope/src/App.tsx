@@ -37,12 +37,12 @@ const route = createBrowserRouter([
             {
                 path:"/search/:name",
                 element:<SearchPage />
+            },
+            {
+                path:"*",
+                element:<NotFoundPage />
             }
         ]
-    },
-    {
-        path:"*",
-        element:<NotFoundPage />
     }
 ])
 
