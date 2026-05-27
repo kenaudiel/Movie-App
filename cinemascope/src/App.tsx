@@ -35,7 +35,7 @@ const route = createBrowserRouter([
                 element:<FilmDetail />
             },
             {
-                path:"/search/:name",
+                path:"/search/:keyword",
                 element:<SearchPage />
             },
             {
