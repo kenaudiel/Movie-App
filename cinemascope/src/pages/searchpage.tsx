@@ -11,8 +11,14 @@ export default function SearchPage(){
 
     const filtered = films.filter(film => film.title.toLowerCase().includes(keyword.toLowerCase()))
 
-    return(
-        <section>
+    function FilmList(){
+        if(filtered.length == 0){
+            return(
+                <p>There were no matches for your search term.</p>
+            )
+        }
+
+        return(
             <ul className="grid grid-cols-4 gap-5">
                 {filtered.map(film => 
                     <li key={film.id}>
@@ -20,6 +26,12 @@ export default function SearchPage(){
                     </li>
                 )}
             </ul>
+        )
+    }
+
+    return(
+        <section>
+            {FilmList()}
         </section>
     )
 }
