@@ -28,11 +28,6 @@ const listItem1:listItemProps[] = [
     path:"/"
   },
   {
-    key:"About",
-    title:"About",
-    path:"/about"
-  },
-  {
     key:"Films",
     title:"Films",
     path:"/films"
