@@ -17,6 +17,8 @@ export default function FilmDetail(){
     const filmsFiltered = films.filter(film => film.id === Number(id))
     const film = filmsFiltered[0]
 
+    const otherFilmsFiltered = films.filter(film => film.id != Number(id)).slice(0, 4)
+
     const filmDetails:filmDetailsType[] = [
     {
         key:"Duration",
@@ -45,9 +47,24 @@ export default function FilmDetail(){
         )
     }
 
+    function otherFilmsList(){
+        return(
+            <ul className="mt-5 grid grid-cols-2 gap-3">
+                {otherFilmsFiltered.map(film => 
+                    <li key={film.id} >
+                        <FilmImage path={`/film/${film.id}`} className="bg-black/35 h-30 w-25 dark:bg-card"/>
+                        <div className="mt-2">
+                            <p className="text-xs">{film.title}</p>
+                        </div>
+                    </li>
+                )}
+            </ul>
+        )
+    }
+
     return(
-        <section className="flex gap-20">
-            <Card className="flex flex-row p-10 gap-15 w-220 bg-background ring-0">
+        <section className="flex gap-5">
+            <Card className="flex flex-row p-10 gap-10 w-220 bg-background ring-0">
                 <div className="h-70 w-1/3 flex items-center justify-center bg-black/35 rounded-md dark:bg-card/40">
                     <Image />
                 </div>
@@ -65,9 +82,7 @@ export default function FilmDetail(){
             </Card>
             <div>
                 <p className="text-sm text-muted-foreground">OTHER FILMS</p>
-                <div>
-                    <FilmImage />
-                </div>
+                {otherFilmsList()}
             </div>
         </section>
     )
