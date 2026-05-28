@@ -1,3 +1,4 @@
+import FilmImage from "@/components/filmimage";
 import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { films } from "@/data/films";
 import { Clock, Image } from "lucide-react";
@@ -63,7 +64,10 @@ export default function FilmDetail(){
                 </CardHeader>
             </Card>
             <div>
-                <p className="text-sm text-muted-foreground">RELATED FILMS</p>
+                <p className="text-sm text-muted-foreground">OTHER FILMS</p>
+                <div>
+                    <FilmImage />
+                </div>
             </div>
         </section>
     )
