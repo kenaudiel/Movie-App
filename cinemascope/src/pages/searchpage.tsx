@@ -1,3 +1,4 @@
+import { CardImage } from "@/components/cardimage"
 import { films } from "@/data/films"
 import { useParams } from "react-router-dom"
 
@@ -12,7 +13,13 @@ export default function SearchPage(){
 
     return(
         <section>
-            
+            <ul className="grid grid-cols-4 gap-5">
+                {filtered.map(film => 
+                    <li key={film.id}>
+                        <CardImage id={film.id} title={film.title} year={film.year} duration={film.duration} rating={film.rating} synopsis={film.synopsis} badge={film.badge} path={`/film/${film.id}`}/>
+                    </li>
+                )}
+            </ul>
         </section>
     )
 }
