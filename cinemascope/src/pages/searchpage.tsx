@@ -30,7 +30,7 @@ export default function SearchPage(){
     }
 
     return(
-        <section>
+        <section className="min-h-114">
             {FilmList()}
         </section>
     )
