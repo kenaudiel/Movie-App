@@ -8,7 +8,7 @@ export default function BlogPage(){
                 <h1 className="text-3xl font-bold">Blog</h1>
                 <p className="text-muted-foreground text-lg" >Discover stories, ideas, and perspectives worth reading.</p>
             </div>
-            <ul className="grid grid-cols-3 gap-15">
+            <ul className="grid grid-cols-3 gap-10">
                 {blogs.map(blog =>
                     <li key={blog.key}>
                         <BlogCard title={blog.title} author={blog.author} date={blog.date} description={blog.description} key={blog.key} topic={blog.topic}/> 
