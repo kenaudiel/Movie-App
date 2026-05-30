@@ -10,8 +10,8 @@ export default function BlogPage(){
             </div>
             <ul className="grid grid-cols-3 gap-10">
                 {blogs.map(blog =>
-                    <li key={blog.key}>
-                        <BlogCard title={blog.title} author={blog.author} date={blog.date} description={blog.description} key={blog.key} topic={blog.topic}/> 
+                    <li key={blog.id}>
+                        <BlogCard title={blog.title} author={blog.author} date={blog.date} description={blog.description} id={blog.id} topic={blog.topic}/> 
                     </li>
                 )}
             </ul>

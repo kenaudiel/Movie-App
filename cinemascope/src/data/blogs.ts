@@ -1,5 +1,5 @@
 export type blogsType = {
-    key:number,
+    id:number,
     author:string,
     date:string,
     title:string,
@@ -9,7 +9,7 @@ export type blogsType = {
 
 export const blogs:blogsType[] = [
     {
-        key:1,
+        id:1,
         author:"Kenneth Audiel",
         date:"30 May 2026",
         title:"Top 10 Highest Rating Films in 2026",
@@ -17,7 +17,7 @@ export const blogs:blogsType[] = [
         description:"Have you wonder which film should you watch tonight? We got some suggestion for you."
     },
     {
-        key:2,
+        id:2,
         author:"Lenon Jame",
         date:"30 May 2026",
         title:"The Avengers: Why Is It One of The Greatest Film of All Time",
@@ -25,7 +25,7 @@ export const blogs:blogsType[] = [
         description:"Here are some reason why The Avengers is arguably one of the best film among all."
     },
     {
-        key:3,
+        id:3,
         author:"Brian Zeke",
         date:"31 May 2026",
         title:"All Spider-Man Movies Ranked",

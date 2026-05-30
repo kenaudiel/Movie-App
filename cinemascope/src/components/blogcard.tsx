@@ -2,13 +2,16 @@ import type { blogsType } from "@/data/blogs";
 import FilmImage from "./filmimage";
 import { Card, CardAction, CardContent, CardHeader, CardTitle } from "./ui/card";
 import { Badge } from "./ui/badge";
+import { Link } from "react-router-dom";
 
 type blogCardProps = blogsType
 
-export default function BlogCard({author, date, title, description, topic}:blogCardProps){
+export default function BlogCard({id, author, date, title, description, topic}:blogCardProps){
     return(
         <Card className="flex pt-0 pb-5 gap-3">
-            <FilmImage className="w-full h-50"/>
+            <Link to={`/blog/${id}`}>
+                <FilmImage className="w-full h-50"/>
+            </Link>
             <CardHeader className="items-center justify-center">
                 <CardTitle className="flex flex-col justify-start text-xs text-muted-foreground mb-1 font-bold ">
                     {author} | {date}
