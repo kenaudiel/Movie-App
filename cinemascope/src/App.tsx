@@ -7,6 +7,7 @@ import FilmsPage from "./pages/filmspage";
 import BlogPage from "./pages/blogpage";
 import FilmDetail from "./pages/filmdetail";
 import SearchPage from "./pages/searchpage";
+import BlogDetail from "./pages/blogdetail";
 
 const route = createBrowserRouter([
     {
@@ -32,6 +33,10 @@ const route = createBrowserRouter([
             {
                 path:"/search/:keyword",
                 element:<SearchPage />
+            },
+            {
+                path:"/blog/:id",
+                element:<BlogDetail />
             },
             {
                 path:"*",
