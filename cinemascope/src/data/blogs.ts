@@ -3,7 +3,7 @@ type blogsType = {
     author:string,
     date:string,
     title:string,
-    topic:string,
+    topic:"Recommendation" | "Review" | "Ranking" | "Interview" | "Analysis" | "Behind the Scene"
     description:string
 }
 
