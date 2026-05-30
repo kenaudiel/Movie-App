@@ -1,4 +1,4 @@
-type blogsType = {
+export type blogsType = {
     key:number,
     author:string,
     date:string,
@@ -7,7 +7,7 @@ type blogsType = {
     description:string
 }
 
-const blogs:blogsType[] = [
+export const blogs:blogsType[] = [
     {
         key:1,
         author:"Kenneth Audiel",
