@@ -2,12 +2,22 @@ import type { blogsType } from "@/data/blogs";
 import FilmImage from "./filmimage";
 import { Card, CardAction, CardContent, CardHeader, CardTitle } from "./ui/card";
 import { Badge } from "./ui/badge";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 type blogCardProps = blogsType
 
 export default function BlogCard({id, author, date, title, description, topic}:blogCardProps){
     const navigate = useNavigate()
+
+    function BadgeColor(){
+        if(topic == "Interview" || topic == "Analysis"){
+            return "text-blue-300"
+        } else if(topic == "Ranking" || topic == "Behind the Scene"){
+            return "text-purple-300"
+        } else {
+            return "text-yellow-300"
+        }
+    }
 
     return(
         <Card className="flex pt-0 pb-5 gap-3">
@@ -17,7 +27,7 @@ export default function BlogCard({id, author, date, title, description, topic}:b
                     {author} | {date}
                 </CardTitle>
                 <CardAction>
-                    <Badge variant="secondary">{topic}</Badge>
+                    <Badge variant="secondary" className={BadgeColor()}>{topic}</Badge>
                 </CardAction>
             </CardHeader>
             <CardContent className="flex flex-col gap-2">
