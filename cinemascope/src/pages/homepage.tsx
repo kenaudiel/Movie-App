@@ -1,19 +1,24 @@
 import { CardImage } from "@/components/cardimage"
 import { Button } from "@/components/ui/button"
 import { films } from "@/data/films"
+import { FaArrowRight } from "react-icons/fa"
+import { useNavigate } from "react-router-dom"
 
 export default function HomePage(){
+    const navigate = useNavigate()
     return(
         <>
             <section className="">
                 <div className="flex flex-col gap-3 items-center justify-center mt-10">
-                    <h1 className="text-4xl font-bold">Everything Worth Your Time</h1>
-                    <p className="text-lg">
+                    <h1 className="text-5xl font-bold dark:text-orange-300 text-yellow-500">Everything Worth Your Time</h1>
+                    <p className="text-xl dark:text-gray-300 text-black/50">
                         A place to explore films, movies, and blogs that actually matter.
                     </p>
                     <div className="flex gap-5 mt-5">
-                        <Button variant="default">Get Started</Button>
-                        <Button variant="secondary">Watch Films</Button>
+                        <Button size="lg" variant="default" onClick={() => navigate("/films")}>
+                            Watch Films
+                            <FaArrowRight/>
+                        </Button>
                     </div>
                 </div>
                 
