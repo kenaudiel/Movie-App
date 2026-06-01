@@ -1,5 +1,6 @@
 import FilmImage from "@/components/filmimage";
 import { blogs } from "@/data/blogs";
+import { Badge } from '@/components/ui/badge'
 import { useParams } from "react-router-dom";
 
 export default function BlogDetail(){
@@ -8,13 +9,26 @@ export default function BlogDetail(){
     const filtered = blogs.filter(blog => blog.id === Number(id))
     const blog = filtered[0]
 
+    function BadgeColor(){
+        if(blog.topic == "Interview" || blog.topic == "Analysis"){
+            return "text-blue-300"
+        } else if(blog.topic == "Ranking" || blog.topic == "Behind the Scene"){
+            return "text-purple-300"
+        } else {
+            return "text-yellow-300"
+        }
+    }
+
     return(
         <section className="px-40">
             <div className="flex justify-center px-10 py-3">
                 <FilmImage className="dark:bg-card bg-black/35 w-full h-60"/>
             </div>
             <div className="mt-3 px-10 flex flex-col gap-2">
-                <h2 className="text-3xl font-bold">{blog.title}</h2>
+                <div className="flex justify-between items-center">
+                    <h2 className="text-3xl font-bold">{blog.title}</h2>
+                    <Badge variant="secondary" className={`text-sm p-4 ${BadgeColor()}`}>{blog.topic}</Badge>
+                </div>
                 <p className="text-muted-foreground">{blog.author} | {blog.date}</p>
             </div>
             <div className="mt-10 px-10 text-justify flex flex-col gap-10 text-gray-300">
