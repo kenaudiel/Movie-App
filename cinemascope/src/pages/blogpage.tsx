@@ -2,6 +2,7 @@ import BlogCard from "@/components/blogcard";
 import CarouselCard from "@/components/carouselcard";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { blogs } from "@/data/blogs";
+import { quotes } from "@/data/quotes";
 
 export default function BlogPage(){
     return(
@@ -18,14 +19,12 @@ export default function BlogPage(){
                     </li>
                 )}
             </ul>
-            <div className="mt-5">
-                <p className="text-muted-foreground text-sm mb-5">USER STORIES</p>
+            <div className="mt-10">
+                <p className="text-muted-foreground text-sm">FAMOUS QUOTES & INSPIRATION</p>
                 <div className="flex justify-center items-center">
-                    <Carousel className="">
-                        <CarouselContent>
-                            <CarouselItem>
-                                <CarouselCard></CarouselCard>
-                            </CarouselItem>
+                    <Carousel className="w-full">
+                        <CarouselContent className="">
+                            <CarouselCardList />
                         </CarouselContent>
                         <CarouselPrevious />
                         <CarouselNext />
@@ -33,5 +32,15 @@ export default function BlogPage(){
                 </div>
             </div>
         </section>
+    )
+}
+
+function CarouselCardList(){
+    return(
+        quotes.map((item, index) =>
+            <CarouselItem key={index} className="flex items-center basis-1/3">
+                <CarouselCard name={item.name} film={item.film} quote={item.quote}/>
+            </CarouselItem>
+        )
     )
 }
