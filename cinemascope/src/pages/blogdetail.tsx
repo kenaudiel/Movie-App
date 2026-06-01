@@ -11,11 +11,11 @@ export default function BlogDetail(){
 
     function BadgeColor(){
         if(blog.topic == "Interview" || blog.topic == "Analysis"){
-            return "text-blue-300"
+            return "dark:text-blue-300 text-blue-400"
         } else if(blog.topic == "Ranking" || blog.topic == "Behind the Scene"){
-            return "text-purple-300"
+            return "dark:text-purple-300 text-purple-400"
         } else {
-            return "text-yellow-300"
+            return "dark:text-yellow-300 text-yellow-600"
         }
     }
 
@@ -31,7 +31,7 @@ export default function BlogDetail(){
                 </div>
                 <p className="text-muted-foreground">{blog.author} | {blog.date}</p>
             </div>
-            <div className="mt-10 px-10 text-justify flex flex-col gap-10 text-gray-300">
+            <div className="mt-10 px-10 text-justify flex flex-col gap-10 dark:text-gray-300 text-gray-600">
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt, dicta quae cumque quam beatae quisquam odio doloremque vel repudiandae earum maxime suscipit magni corrupti repellendus facere minima magnam, aperiam nisi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, necessitatibus? Odio quia facere corrupti dolore nam laboriosam. Maxime quis modi iste officiis molestias odio placeat possimus, fuga architecto porro reiciendis. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus modi temporibus culpa enim repellendus aspernatur commodi aliquid rem nemo dicta. Quaerat odio architecto nobis velit porro exercitationem odit, autem nisi.</p>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos in dolor accusantium cupiditate aperiam ipsum quis culpa, veritatis iusto porro quia, molestiae laboriosam ut architecto quod debitis omnis minus minima. Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim tempore corrupti expedita nesciunt magnam veniam, dicta voluptates repudiandae dolores iure, repellat architecto reiciendis vel, quibusdam itaque dolore! Necessitatibus, inventore ipsum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, delectus, fuga nemo nihil iste asperiores, repudiandae culpa dolore voluptate corrupti ipsum impedit animi? Debitis enim molestias ab! Omnis, molestias enim?</p>
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt, dicta quae cumque quam beatae quisquam odio doloremque vel repudiandae earum maxime suscipit magni corrupti repellendus facere minima magnam, aperiam nisi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, necessitatibus? Odio quia facere corrupti dolore nam laboriosam. Maxime quis modi iste officiis molestias odio placeat possimus, fuga architecto porro reiciendis. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus modi temporibus culpa enim repellendus aspernatur commodi aliquid rem nemo dicta. Quaerat odio architecto nobis velit porro exercitationem odit, autem nisi.</p>

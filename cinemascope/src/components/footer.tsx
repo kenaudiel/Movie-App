@@ -115,7 +115,7 @@ function SocialMediaList(){
 function footerLinksList(){
     return(
         footerLinks.map(item =>
-            <NavigationMenuItem key={item.key} className="text-sm hover:text-orange-300">
+            <NavigationMenuItem key={item.key} className="text-sm dark:hover:text-orange-300 hover:text-orange-400">
                 <Link to={item.path}>
                     {item.text}
                 </Link>

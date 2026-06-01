@@ -22,7 +22,7 @@ export default function CardImageHorizontal({id, title, synopsis, year, rating, 
             <div className="w-140 py-5">
                 <CardHeader className="">
                     <CardAction>
-                        <Badge variant="secondary" className={`${badge === "Premium" && "text-yellow-400"}`}>{badge}</Badge>
+                        <Badge variant="secondary" className={`${badge === "Premium" && "dark:text-yellow-400 text-yellow-600"}`}>{badge}</Badge>
                     </CardAction>
                     <CardTitle>
                         <Link to={`/film/${id}`}> 

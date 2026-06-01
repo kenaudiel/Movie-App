@@ -14,7 +14,7 @@ export default function FilmsPage(){
         <>
             <div className="flex flex-col gap-2 px-20 pt-10">
                 <h1 className="text-3xl font-bold font-sans">Films</h1>
-                <h2 className="text-lg text-gray-300/80">Find your next favorite film to watch.</h2>
+                <h2 className="text-lg text-muted-foreground">Find your next favorite film to watch.</h2>
             </div>
             
             <section className="flex gap-15">
@@ -51,7 +51,7 @@ function ListMoreFilm(){
         sliceMoreFilm.map(film =>
             <li key={film.id} className="max-w-fit">
                 <div className="flex flex-col items-center gap-2">
-                    <FilmImage className="w-25 h-30 bg-card" path={`/film/${film.id}`}/>
+                    <FilmImage className="w-25 h-30 dark:bg-card bg-black/35" path={`/film/${film.id}`}/>
                     <div className="flex gap-2">
                         <div className="flex items-center gap-1 text-xs">
                             <Clock size={12} color="#e26918"/>

@@ -56,7 +56,7 @@ export default function Navbar(){
       <NavigationMenu className="justify-between h-15 border-b-2 sticky top-0 z-100 bg-white dark:bg-black">
           <NavigationMenuList className="flex ml-20 gap-5">
             {listItem1.map(item => 
-              <NavigationMenuItem key={item.key} className="text-sm hover:text-orange-300">
+              <NavigationMenuItem key={item.key} className="text-sm dark:hover:text-orange-300 hover:text-orange-400">
               <Link to={item.path}>
                 {item.title}
               </Link>

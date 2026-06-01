@@ -30,7 +30,7 @@ export function CardImage({id, title, year, duration, rating, badge, path, synop
       <CardHeader className="">
         <CardTitle className="w-42">
           <Link to={`/film/${id}`}>
-            <span className="hover:text-orange-300">{title}</span>
+            <span className="dark:hover:text-orange-300 hover:text-orange-400">{title}</span>
           </Link>
           <span className="text-muted-foreground ml-2">{`(${year})`}</span></CardTitle>
         <CardAction>

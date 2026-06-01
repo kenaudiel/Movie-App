@@ -11,11 +11,11 @@ export default function BlogCard({id, author, date, title, description, topic}:b
 
     function BadgeColor(){
         if(topic == "Interview" || topic == "Analysis"){
-            return "text-blue-300"
+            return "dark:text-blue-300 text-blue-400"
         } else if(topic == "Ranking" || topic == "Behind the Scene"){
-            return "text-purple-300"
+            return "dark:text-purple-300 text-purple-400"
         } else {
-            return "text-yellow-300"
+            return "dark:text-yellow-300 text-yellow-600"
         }
     }
 
