@@ -69,7 +69,7 @@ export default function Navbar(){
           </NavigationMenuList>
 
           <NavigationMenuList className="mr-4 gap-2">
-					  <Button onClick={() => onClickToggleMode(theme, setTheme)} variant="ghost" size="icon-lg">
+					  <Button className="cursor-pointer" onClick={() => onClickToggleMode(theme, setTheme)} variant="ghost" size="icon-lg">
 							{theme === "dark" ? <Sun/> : <Moon/>}
 						</Button>
 						<Button asChild variant="ghost" size="icon-lg">
@@ -79,7 +79,7 @@ export default function Navbar(){
             </Button>
             <DropdownMenu>
               <DropdownMenuTrigger asChild className="ml-6">
-                <Avatar size="lg">
+                <Avatar size="lg" className="cursor-pointer">
                   <AvatarFallback>K</AvatarFallback>
                 </Avatar>
               </DropdownMenuTrigger>

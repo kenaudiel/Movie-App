@@ -22,7 +22,7 @@ export default function SearchBar() {
     <form onSubmit={handleSubmit}>
       <Field orientation="horizontal">
         <Input className="w-150" type="search" placeholder="Search..." value={query} onChange={e => setQuery(e.target.value)}/>
-        <Button type="submit">Search</Button>
+        <Button type="submit" className="cursor-pointer">Search</Button>
       </Field>
     </form>
   )

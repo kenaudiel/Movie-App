@@ -26,8 +26,8 @@ export default function BlogPage(){
                         <CarouselContent className="">
                             <CarouselCardList />
                         </CarouselContent>
-                        <CarouselPrevious />
-                        <CarouselNext />
+                        <CarouselPrevious size="icon-lg"/>
+                        <CarouselNext size="icon-lg"/>
                     </Carousel>
                 </div>
             </div>

@@ -15,7 +15,7 @@ export default function HomePage(){
                         A place to explore films, movies, and blogs that actually matter.
                     </p>
                     <div className="flex gap-5 mt-5">
-                        <Button size="lg" variant="default" onClick={() => navigate("/films")}>
+                        <Button className="cursor-pointer" size="lg" variant="default" onClick={() => navigate("/films")}>
                             Watch Films
                             <FaArrowRight/>
                         </Button>
