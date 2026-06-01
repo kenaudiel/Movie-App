@@ -1,4 +1,8 @@
 import BlogCard from "@/components/blogcard";
+import CarouselCard from "@/components/carouselcard";
+import { Avatar, AvatarFallback } from "@/components/ui/avatar";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { blogs } from "@/data/blogs";
 
 export default function BlogPage(){
@@ -8,6 +12,7 @@ export default function BlogPage(){
                 <h1 className="text-3xl font-bold">Blog</h1>
                 <p className="text-muted-foreground text-lg" >Discover stories, ideas, and perspectives worth reading.</p>
             </div>
+            <p className="text-muted-foreground text-sm mb-5">RECENT BLOG POSTS</p>
             <ul className="grid grid-cols-3 gap-10">
                 {blogs.map(blog =>
                     <li key={blog.id}>
@@ -15,6 +20,20 @@ export default function BlogPage(){
                     </li>
                 )}
             </ul>
+            <div className="mt-5">
+                <p className="text-muted-foreground text-sm mb-5">USER STORIES</p>
+                <div className="flex justify-center items-center">
+                    <Carousel className="">
+                        <CarouselContent>
+                            <CarouselItem>
+                                <CarouselCard></CarouselCard>
+                            </CarouselItem>
+                        </CarouselContent>
+                        <CarouselPrevious />
+                        <CarouselNext />
+                    </Carousel>
+                </div>
+            </div>
         </section>
     )
 }
