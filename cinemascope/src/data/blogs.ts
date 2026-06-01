@@ -1,10 +1,10 @@
 export type blogsType = {
-    id:number,
+    id?:number,
     author:string,
     date:string,
     title:string,
-    topic:"Recommendation" | "Review" | "Ranking" | "Interview" | "Analysis" | "Behind the Scene"
-    description:string
+    topic?:"Recommendation" | "Review" | "Ranking" | "Interview" | "Analysis" | "Behind the Scene"
+    description?:string
 }
 
 export const blogs:blogsType[] = [
